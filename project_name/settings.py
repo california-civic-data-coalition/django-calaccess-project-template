@@ -14,8 +14,8 @@ ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
 ]
-ROOT_URLCONF = 'project.urls'
-WSGI_APPLICATION = 'project.wsgi.application'
+ROOT_URLCONF = '{{ project_name }}.urls'
+WSGI_APPLICATION = '{{ project_name }}.wsgi.application'
 
 INSTALLED_APPS = (
     'django.contrib.admin',
