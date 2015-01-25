@@ -43,11 +43,11 @@ MIDDLEWARE_CLASSES = (
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.environ.get('MYSQL_DATABASE'),
-        'USER': os.environ.get('MYSQL_USER'),
-        'PASSWORD': os.environ.get('MYSQL_PASSWORD'),
-        'HOST': '',
-        'PORT': '3306',
+        'NAME': os.environ.get('MYSQL_DATABASE', 'calaccess'),
+        'USER': os.environ.get('MYSQL_USER', 'ccdc'),
+        'PASSWORD': os.environ.get('MYSQL_PASSWORD', 'ccdc'),
+        'HOST': os.environ.get('MYSQL_HOST', 'localhost'),
+        'PORT': os.environ.get('MYSQL_PORT', '3306'),
         'OPTIONS': {
             'local_infile': 1,
         }
